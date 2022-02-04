@@ -1,6 +1,10 @@
 # Predictorist
 
-- Crafted together with https://github.com/Pfed-prog
-- Backend can be found at https://github.com/Pfed-prog/AWS_ML
 
-### Video demo: https://youtu.be/lZcb-Xuztt4
+## Installation
+
+```bash
+nvm install node 14.17.0
+nvm use 14.17.0
+yarn
+```
