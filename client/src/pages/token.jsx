@@ -30,7 +30,7 @@ const Token = () => {
   async function fetchPrediction() {
     try {
       const res = fetch(
-        `http://app-env.eba-hxn3i6de.us-east-2.elasticbeanstalk.com/?f=10&q=%7Btoken%20(id:%22${address}%22)%7BtokenDayData%7BpriceUSD%20date%7D%7D%7D`
+        `https://dspyt.herokuapp.com/?f=10&a={address}`
       );
       const info = await (await res).json();
       const fetchedPredictions = info.predictions.map((prediction, i) => {
