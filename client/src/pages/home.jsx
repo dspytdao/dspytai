@@ -34,6 +34,11 @@ const topTokens = [
     address: "0xf629cbd94d3791c9250152bd8dfbdf380e2a3b9c",
     logo: "https://assets.coingecko.com/coins/images/1102/small/enjin-coin-logo.png?1547035078",
   },
+  {
+    name: "MATIC",
+    address: "0x7d1afa7b718fb893db30a3abc0cfc608aacfebb0",
+    logo: "https://assets.coingecko.com/coins/images/4713/small/matic-token-icon.png?1624446912",
+  },
 ];
 
 const Home = () => {
