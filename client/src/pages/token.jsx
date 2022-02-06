@@ -30,7 +30,7 @@ const Token = () => {
   async function fetchPrediction() {
     try {
       const res = fetch(
-        `https://dspyt.herokuapp.com/?f=10&a={address}`
+        `https://dspyt.herokuapp.com/?f=10&a=${address}`
       );
       const info = await (await res).json();
       const fetchedPredictions = info.predictions.map((prediction, i) => {
