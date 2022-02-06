@@ -26,7 +26,7 @@ const Navbar = () => {
           display="flex"
           alignItems="center"
         >
-          Predictorist
+          Dspytai
         </chakra.a>
 
         <HStack spacing={3} display="flex" alignItems="center">
