@@ -9,7 +9,7 @@
     "@emotion/styled": "^11.6.0",
     "@fontsource/luxurious-script": "^4.5.1",
     "@testing-library/jest-dom": "^5.16.1",
-    "@testing-library/react": "^12.1.2",
+    "@testing-library/react": "^12.1.5",
     "@testing-library/user-event": "^13.5.0",
     "apexcharts": "^3.32.0",
     "framer-motion": "^5.3.3",
