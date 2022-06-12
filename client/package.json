@@ -7,7 +7,7 @@
     "@chakra-ui/react": "^1.7.3",
     "@emotion/react": "^11.7.1",
     "@emotion/styled": "^11.6.0",
-    "@fontsource/luxurious-script": "^4.5.1",
+    "@fontsource/luxurious-script": "^4.5.7",
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.5",
     "@testing-library/user-event": "^14.2.0",
