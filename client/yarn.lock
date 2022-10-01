@@ -1828,10 +1828,10 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@fontsource/luxurious-script@^4.5.7":
-  version "4.5.7"
-  resolved "https://registry.yarnpkg.com/@fontsource/luxurious-script/-/luxurious-script-4.5.7.tgz#3b333663a79e0c5196ef95bacdcb27c87e94f07d"
-  integrity sha512-Q3cqKht5J8EbRYiOqmfbQHKKHlui8vd4FFQstrK+vVARBqSb+eVe7tD4ckaOLnQVN5WT7qgkQxsYI2tWOJtj4g==
+"@fontsource/luxurious-script@^4.5.8":
+  version "4.5.8"
+  resolved "https://registry.yarnpkg.com/@fontsource/luxurious-script/-/luxurious-script-4.5.8.tgz#2806a28945771ed77e90f6a4f26ded9ec1610eaf"
+  integrity sha512-ghJHxo0SMJlPLgrXpXyhcRMwRMY7rKLQ4eAIupZ8p8Se5nwABs2+69JB6Udkqp4C7JruA3uqUiv7x3PoQ5TE+g==
 
 "@graphql-typed-document-node/core@^3.1.1":
   version "3.1.1"
