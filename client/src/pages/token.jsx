@@ -12,6 +12,7 @@ import Chart from "react-apexcharts";
 import NotFound from "./notFound";
 import moment from "moment";
 import { gql, useQuery } from "@apollo/client";
+
 const Token = () => {
   const address = useParams().address;
   const TOKEN_NAME = gql`
@@ -24,33 +25,33 @@ const Token = () => {
   `;
 
   const [predictions, setPredictions] = useState();
-  const { data, error } = useQuery(TOKEN_NAME, {
+  const { data } = useQuery(TOKEN_NAME, {
     variables: { address },
   });
-  async function fetchPrediction() {
-    try {
-      const res = fetch(
-        `https://dspyt.herokuapp.com/?f=10&a=${address}`
-      );
-      const info = await (await res).json();
-      const fetchedPredictions = info.predictions.map((prediction, i) => {
-        const time = new Date(Date.now() + Number(info.timestep) * (i + 1));
 
-        return {
-          price: prediction.toFixed(4),
-          timestamp: time.getTime(),
-          time: moment(time).format("hh:mm:ss"),
-        };
-      });
-
-      setPredictions(fetchedPredictions);
-    } catch {
-      console.log("not available");
-    }
-  }
   useEffect(() => {
+    async function fetchPrediction() {
+      try {
+        const res = fetch(`https://dspyt.herokuapp.com/?f=10&a=${address}`);
+        const info = await (await res).json();
+        console.log(info);
+        const fetchedPredictions = info.predictions.map((prediction, i) => {
+          const time = new Date((Number(info.last_date) + i * 86400) * 1000);
+          console.log(time);
+          return {
+            price: prediction.toFixed(4),
+            timestamp: time.getTime(),
+            time: moment(time).format("MMM d"),
+          };
+        });
+
+        setPredictions(fetchedPredictions);
+      } catch {
+        console.log("not available");
+      }
+    }
     if (address.match(/^0x[a-fA-F0-9]{40}$/)) fetchPrediction();
-  }, []);
+  }, [address]);
   if (address.match(/^0x[a-fA-F0-9]{40}$/))
     if (!data)
       return (
