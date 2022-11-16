@@ -34,14 +34,15 @@ const Token = () => {
       try {
         const res = fetch(`https://dspyt.herokuapp.com/?f=10&a=${address}`);
         const info = await (await res).json();
-        console.log(info);
+        //console.log(info);
         const fetchedPredictions = info.predictions.map((prediction, i) => {
           const time = new Date((Number(info.last_date) + i * 86400) * 1000);
-          console.log(time);
+          //console.log(time);
+          //console.log(moment(time).format("Do MM"));
           return {
             price: prediction.toFixed(4),
-            timestamp: time.getTime(),
-            time: moment(time).format("MMM d"),
+            timestamp: time,
+            time: moment(time).format("Do MMM"),
           };
         });
 
