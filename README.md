@@ -8,6 +8,8 @@ First Uniswap centered Dapp that utilizes on-chain data to model potential price
 
 [Live Demo](https://dspytai.vercel.app/)
 
+[Kaggle Notebook](https://www.kaggle.com/code/pavfedotov/dspyt-ai)
+
 ## Backend
 
 [The backend Vercel repository](https://github.com/dspytdao/vercel-python)
