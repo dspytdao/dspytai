@@ -1,5 +1,7 @@
 # DspytAI
 
+Developed as part of [Algovera Grant](https://forum.algovera.ai/t/dspyt-ai-uniswap-portfolio-tracker/184)
+
 ## Summary
 
 First Uniswap centered Dapp that utilizes on-chain data to model potential price fluctuations in real-time.
