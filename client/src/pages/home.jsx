@@ -2,42 +2,27 @@ import { Avatar, Box, HStack, Spacer, Text } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import React from "react";
-
+// https://evm.evmos.org/tokens
 const topTokens = [
   {
-    name: "UNI",
-    address: "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
-    logo: "https://assets.coingecko.com/coins/images/12504/small/uniswap-uni.png?1600306604",
+    name: "DIFF",
+    address: "0x3f75ceabCDfed1aCa03257Dc6Bdc0408E2b4b026",
+    logo: "https://assets.coingecko.com/coins/images/25331/small/photo5451952870917257644.jpg?1651826321",
   },
   {
-    name: "GTC",
-    address: "0xde30da39c46104798bb5aa3fe8b9e0e1f348163f",
-    logo: "https://assets.coingecko.com/coins/images/15810/small/gitcoin.png?1621992929",
+    name: "MSM",
+    address: "0xee7fa5Bf82EdAB83dE8A184399360c4E6148A23e",
+    logo: "",
   },
   {
-    name: "GRT",
-    address: "0xc944e90c64b2c07662a292be6244bdf05cda44a7",
-    logo: "https://assets.coingecko.com/coins/images/13397/small/Graph_Token.png?1608145566",
+    name: "USDC",
+    address: "0x51e44FfaD5C2B122C8b635671FCC8139dc636E82",
+    logo: "https://assets.coingecko.com/coins/images/6319/small/USD_Coin_icon.png?1547042389",
   },
   {
-    name: "SUSHI",
-    address: "0x6b3595068778dd592e39a122f4f5a5cf09c90fe2",
-    logo: "https://assets.coingecko.com/coins/images/12271/small/512x512_Logo_no_chop.png?1606986688",
-  },
-  {
-    name: "MANA",
-    address: "0x0f5d2fb29fb7d3cfee444a200298f468908cc942",
-    logo: "https://assets.coingecko.com/coins/images/878/small/decentraland-mana.png?1550108745",
-  },
-  {
-    name: "ENJ",
-    address: "0xf629cbd94d3791c9250152bd8dfbdf380e2a3b9c",
-    logo: "https://assets.coingecko.com/coins/images/1102/small/enjin-coin-logo.png?1547035078",
-  },
-  {
-    name: "MATIC",
-    address: "0x7d1afa7b718fb893db30a3abc0cfc608aacfebb0",
-    logo: "https://assets.coingecko.com/coins/images/4713/small/matic-token-icon.png?1624446912",
+    name: "EVD",
+    address: "0x47685B6AC7bB4de761A57828877A7B8254c8B145",
+    logo: "https://assets.coingecko.com/coins/images/27785/small/evmos-domains.png?1665798992",
   },
 ];
 
