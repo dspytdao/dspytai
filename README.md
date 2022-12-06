@@ -1,7 +1,5 @@
 # DspytAI (EVMOSCovalent AI)
 
-Developed as part of [Algovera Grant](https://forum.algovera.ai/t/dspyt-ai-uniswap-portfolio-tracker/184)
-
 ## Summary
 
 EVMOS blockchain Dapp that utilizes on-chain data to model potential price fluctuations in real-time from covalent api.
@@ -23,6 +21,8 @@ Users also have the option to download price prediction data in both text based 
 Our goal is to continue to refine and improve the accuracy of our price prediction model and build out additional features to make price prediction easier and more accessible to users. We also plan to explore collaborations with other data and analytics providers to extend our reach and the utility of our application.
 
 ## Uniswap Version
+
+Developed as part of [Algovera Grant](https://forum.algovera.ai/t/dspyt-ai-uniswap-portfolio-tracker/184)
 
 Dspytai is the first Uniswap powered Dapp that utilizes on-chain data to model potential price fluctuations in real-time.
 
