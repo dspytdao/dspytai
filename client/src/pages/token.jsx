@@ -1,41 +1,23 @@
-import {
-  Box,
-  Heading,
-  Text,
-  Avatar,
-  Center,
-  CircularProgress,
-} from "@chakra-ui/react";
+import { Box, Text, Center, CircularProgress } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Chart from "react-apexcharts";
 import NotFound from "./notFound";
 import moment from "moment";
-import { gql, useQuery } from "@apollo/client";
 
 const Token = () => {
   const address = useParams().address;
-  const TOKEN_NAME = gql`
-    query ($address: String!) {
-      token(id: $address) {
-        name
-        symbol
-      }
-    }
-  `;
-
   const [predictions, setPredictions] = useState();
-  const { data } = useQuery(TOKEN_NAME, {
-    variables: { address },
-  });
 
   useEffect(() => {
     async function fetchPrediction() {
       try {
-        const res = fetch(`https://dspyt.herokuapp.com/?f=10&a=${address}`);
-        const info = await (await res).json();
-        //console.log(info);
-        const fetchedPredictions = info.predictions.map((prediction, i) => {
+        const res = await fetch(
+          `https://arima-vercel.vercel.app/?a=${address}`
+        );
+        const info = await res.json();
+        console.log(info);
+        const fetchedPredictions = info.prediction.map((prediction, i) => {
           const time = new Date((Number(info.last_date) + i * 86400) * 1000);
           //console.log(time);
           //console.log(moment(time).format("Do MM"));
@@ -54,7 +36,7 @@ const Token = () => {
     if (address.match(/^0x[a-fA-F0-9]{40}$/)) fetchPrediction();
   }, [address]);
   if (address.match(/^0x[a-fA-F0-9]{40}$/))
-    if (!data)
+    if (!predictions)
       return (
         <Center mt="20">
           <CircularProgress
@@ -66,21 +48,10 @@ const Token = () => {
           />
         </Center>
       );
-  if (data.token)
+  if (predictions)
     return (
       <Box p="2">
-        {data && (
-          <Heading textAlign="center" mt="4" mb="2">
-            <Avatar
-              mx="2"
-              src={`https://tokens.1inch.io/${address}.png`}
-              name={data.token.symbol}
-            />
-
-            {`${data.token.name} (${data.token.symbol})`}
-          </Heading>
-        )}
-        {data && predictions && (
+        {predictions && (
           <Box
             mx="auto"
             rounded="md"
