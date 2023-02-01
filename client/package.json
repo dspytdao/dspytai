@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@apollo/client": "^3.7.2",
+    "@apollo/client": "^3.7.6",
     "@chakra-ui/react": "^2.4.3",
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
