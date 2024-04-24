@@ -6,7 +6,6 @@ import {
   InputLeftElement,
   Input,
 } from "@chakra-ui/react";
-import { AiOutlineSearch } from "react-icons/ai";
 import "@fontsource/luxurious-script";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -31,10 +30,7 @@ const Navbar = () => {
 
         <HStack spacing={3} display="flex" alignItems="center">
           <InputGroup>
-            <InputLeftElement
-              pointerEvents="none"
-              children={<AiOutlineSearch />}
-            />
+            <InputLeftElement pointerEvents="none" />
             <Input
               rounded="lg"
               type="text"

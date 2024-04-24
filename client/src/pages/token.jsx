@@ -19,8 +19,7 @@ const Token = () => {
         console.log(info);
         const fetchedPredictions = info.prediction.map((prediction, i) => {
           const time = new Date((Number(info.last_date) + i * 86400) * 1000);
-          //console.log(time);
-          //console.log(moment(time).format("Do MM"));
+
           return {
             price: prediction.toFixed(4),
             timestamp: time,

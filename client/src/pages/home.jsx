@@ -2,7 +2,7 @@ import { Avatar, Box, HStack, Spacer, Text } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import React from "react";
-// https://evm.evmos.org/tokens
+
 const topTokens = [
   {
     name: "DIFF",
@@ -33,6 +33,7 @@ const Home = () => {
     <Box>
       {topTokens.map((token) => (
         <MotionBox
+          key={token.address}
           onClick={() => navigate(`/token/${token.address}`)}
           whileHover={{
             scale: 1.05,
